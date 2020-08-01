@@ -13,4 +13,8 @@ public:
     void mRender();
     void mUpdate();
     ~Player();
+    
+    Vector2f& getPosition() { return this->mPosition; }
+    int& getWidth() { return this->mWidth; }
+    int& getHeight() { return this->mHeight; }
 };

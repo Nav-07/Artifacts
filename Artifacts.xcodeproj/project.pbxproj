@@ -10,6 +10,7 @@
 		4973BBD824D5095E00DE07CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBD724D5095E00DE07CC /* main.cpp */; };
 		4973BBE024D509A200DE07CC /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973BBDF24D509A200DE07CC /* libSDL2-2.0.0.dylib */; };
 		4973BBE424D56E1A00DE07CC /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBE224D56E1A00DE07CC /* Player.cpp */; };
+		4973BBE924D59AC900DE07CC /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBE724D59AC900DE07CC /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		4973BBE224D56E1A00DE07CC /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		4973BBE324D56E1A00DE07CC /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		4973BBE624D56E4C00DE07CC /* Vector2f.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2f.hpp; sourceTree = "<group>"; };
+		4973BBE724D59AC900DE07CC /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		4973BBE824D59AC900DE07CC /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				4973BBD724D5095E00DE07CC /* main.cpp */,
+				4973BBE724D59AC900DE07CC /* Game.cpp */,
+				4973BBE824D59AC900DE07CC /* Game.hpp */,
 				4973BBE124D56E0200DE07CC /* src */,
 			);
 			path = Artifacts;
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4973BBE924D59AC900DE07CC /* Game.cpp in Sources */,
 				4973BBE424D56E1A00DE07CC /* Player.cpp in Sources */,
 				4973BBD824D5095E00DE07CC /* main.cpp in Sources */,
 			);

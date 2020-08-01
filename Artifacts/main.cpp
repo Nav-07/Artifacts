@@ -1,4 +1,5 @@
 #include <SDL2/SDL.h>
+#include "Game.hpp"
 
 int main(int argc, char* argv[]) {
     const int SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480;
@@ -8,6 +9,9 @@ int main(int argc, char* argv[]) {
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_Window* window = SDL_CreateWindow("Artifacts", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
+    
+    Game* game = new Game(SCREEN_WIDTH, SCREEN_HEIGHT);
+    game->mInit();
     
     if (window != nullptr && renderer != nullptr)
     {
@@ -21,10 +25,15 @@ int main(int argc, char* argv[]) {
             isRunning = false;
         }
         
-        SDL_RenderClear(renderer);
+        game->mHandleEvents(event);
+        game->mUpdate();
         
+        SDL_RenderClear(renderer);
+        game->mRender(renderer);
         SDL_RenderPresent(renderer);
     }
+    
+    delete game;
     
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
