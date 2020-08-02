@@ -9,6 +9,8 @@ Player::Player(Vector2f position, int width, int height)
     this->mDestRect.y = position.y;
     this->mDestRect.w = width;
     this->mDestRect.h = height;
+    
+    this->mVelX = this->mVelY = 0;
 }
 
 void Player::mRender(SDL_Renderer* renderer)
@@ -18,6 +20,9 @@ void Player::mRender(SDL_Renderer* renderer)
 
 void Player::mUpdate()
 {
+    mPosition.x += mVelX;
+    mPosition.y += mVelY;
+    
     mDestRect.x = mPosition.x;
     mDestRect.y = mPosition.y;
     mDestRect.w = mWidth;

@@ -12,6 +12,8 @@ private:
     
     SDL_Rect mDestRect;
 public:
+    float mVelX, mVelY;
+    
     Player(Vector2f position, int width, int height);
     void mRender(SDL_Renderer* renderer);
     void mUpdate();

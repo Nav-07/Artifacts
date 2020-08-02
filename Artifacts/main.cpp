@@ -19,6 +19,8 @@ int main(int argc, char* argv[]) {
     }
     
     while (isRunning) {
+        game->mRenderStart();
+        
         SDL_PollEvent(&event);
         if (event.type == SDL_QUIT)
         {
@@ -31,6 +33,8 @@ int main(int argc, char* argv[]) {
         SDL_RenderClear(renderer);
         game->mRender(renderer);
         SDL_RenderPresent(renderer);
+        
+        game->mRenderEnd();
     }
     
     delete game;

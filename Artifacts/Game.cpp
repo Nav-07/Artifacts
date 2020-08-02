@@ -1,5 +1,10 @@
 #include "Game.hpp"
 
+const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
+const int fps = 60;
+const int frameDelay = 1000 / fps;
+Uint32 frameStart, frameTime;
+
 Game::Game(int windowWidth, int windowHeight)
 {
     this->mWindowWidth = windowWidth;
@@ -13,6 +18,11 @@ void Game::mInit()
     Vector2f playerPosition = Vector2f(0, 0);
     
     mPlayer = new Player(playerPosition, playerWidth, playerHeight);
+}
+
+void Game::mRenderStart()
+{
+    frameStart = SDL_GetTicks();
 }
 
 void Game::mUpdate()
@@ -32,9 +42,41 @@ void Game::mRender(SDL_Renderer *renderer)
 
 void Game::mHandleEvents(SDL_Event &e)
 {
+    const float playerSpeed = 2.5f;
+    
+    if (isKeyPressed(SDL_SCANCODE_D))
+        mPlayer->mVelX += playerSpeed;
+    if (isKeyPressed(SDL_SCANCODE_A))
+        mPlayer->mVelX += -playerSpeed;
+    if (isKeyPressed(SDL_SCANCODE_W))
+        mPlayer->mVelY += -playerSpeed;
+    if (isKeyPressed(SDL_SCANCODE_S))
+        mPlayer->mVelY += playerSpeed;
+    
+}
+
+void Game::mRenderEnd()
+{
+    mPlayer->mVelX = mPlayer->mVelY = 0.0f;
+    
+    frameTime = SDL_GetTicks() - frameStart;
+    if (frameDelay > frameTime)
+        SDL_Delay(frameDelay - frameTime);
 }
 
 Game::~Game()
 {
     delete mPlayer;
+}
+
+bool Game::isKeyPressed(SDL_Scancode key)
+{
+    if (keyboardState)
+    {
+        if (keyboardState[key])
+        {
+            return true;
+        }
+    }
+    return false;
 }
