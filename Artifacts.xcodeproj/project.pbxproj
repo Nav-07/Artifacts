@@ -11,6 +11,7 @@
 		4973BBE024D509A200DE07CC /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973BBDF24D509A200DE07CC /* libSDL2-2.0.0.dylib */; };
 		4973BBE424D56E1A00DE07CC /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBE224D56E1A00DE07CC /* Player.cpp */; };
 		4973BBE924D59AC900DE07CC /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBE724D59AC900DE07CC /* Game.cpp */; };
+		4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBEA24D64F6400DE07CC /* Artifacts.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		4973BBE624D56E4C00DE07CC /* Vector2f.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2f.hpp; sourceTree = "<group>"; };
 		4973BBE724D59AC900DE07CC /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		4973BBE824D59AC900DE07CC /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		4973BBEA24D64F6400DE07CC /* Artifacts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Artifacts.cpp; sourceTree = "<group>"; };
+		4973BBEB24D64F6400DE07CC /* Artifacts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Artifacts.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				4973BBE224D56E1A00DE07CC /* Player.cpp */,
 				4973BBE324D56E1A00DE07CC /* Player.hpp */,
 				4973BBE624D56E4C00DE07CC /* Vector2f.hpp */,
+				4973BBEA24D64F6400DE07CC /* Artifacts.cpp */,
+				4973BBEB24D64F6400DE07CC /* Artifacts.hpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				4973BBE924D59AC900DE07CC /* Game.cpp in Sources */,
 				4973BBE424D56E1A00DE07CC /* Player.cpp in Sources */,
 				4973BBD824D5095E00DE07CC /* main.cpp in Sources */,
+				4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
