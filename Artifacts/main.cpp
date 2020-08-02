@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
     
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_Window* window = SDL_CreateWindow("Artifacts", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     
     Game* game = new Game(SCREEN_WIDTH, SCREEN_HEIGHT);
     game->mInit();
@@ -22,10 +22,8 @@ int main(int argc, char* argv[]) {
         game->mRenderStart();
         
         SDL_PollEvent(&event);
-        if (event.type == SDL_QUIT)
-        {
-            isRunning = false;
-        }
+        if (event.type == SDL_QUIT) isRunning = false;
+        if (game->isKeyPressed(SDL_SCANCODE_ESCAPE)) isRunning = false;
         
         game->mHandleEvents(event);
         game->mUpdate();

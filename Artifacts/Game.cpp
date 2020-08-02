@@ -1,8 +1,8 @@
 #include "Game.hpp"
 
 const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
-const int fps = 60;
-const int frameDelay = 1000 / fps;
+const float fps = 60;
+const float frameDelay = 1000 / fps;
 Uint32 frameStart, frameTime;
 
 Game::Game(int windowWidth, int windowHeight)
@@ -42,7 +42,7 @@ void Game::mRender(SDL_Renderer *renderer)
 
 void Game::mHandleEvents(SDL_Event &e)
 {
-    const float playerSpeed = 2.5f;
+    const int playerSpeed = 2;
     
     if (isKeyPressed(SDL_SCANCODE_D))
         mPlayer->mVelX += playerSpeed;
@@ -61,7 +61,7 @@ void Game::mRenderEnd()
     
     frameTime = SDL_GetTicks() - frameStart;
     if (frameDelay > frameTime)
-        SDL_Delay(frameDelay - frameTime);
+        SDL_Delay(frameDelay-frameTime);
 }
 
 Game::~Game()
