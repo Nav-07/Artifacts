@@ -22,4 +22,8 @@ public:
     void mRender(SDL_Renderer* renderer);
     void mRenderEnd();
     ~Artifacts();
+
+    const int& getArtifactWidth() { return this->mArtifactWidth; }
+    const int& getArtifactHeight() { return this->mArtifactHeight; }
+    std::vector<Vector2f>& getPositions() { return this->mPositions; }
 };
