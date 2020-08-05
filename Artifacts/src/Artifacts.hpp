@@ -9,8 +9,9 @@ class Artifacts
 private:
     std::vector<Artifact*> mArtifacts;
     const int mArtifactWidth, mArtifactHeight, mScreenWidth, mScreenHeight;
+    int mCount;
 public:
-    Artifacts(int artifactWidth, int artifactHeight, int screenWidth, int screenHeight);
+    Artifacts(int artifactWidth, int artifactHeight, int screenWidth, int screenHeight, int count = 10);
     void mInit();
     void mUpdate();
     void mRender(SDL_Renderer* renderer);

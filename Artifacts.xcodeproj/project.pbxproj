@@ -13,6 +13,7 @@
 		4973BBE924D59AC900DE07CC /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBE724D59AC900DE07CC /* Game.cpp */; };
 		4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBEA24D64F6400DE07CC /* Artifacts.cpp */; };
 		4973BBEF24DACC8600DE07CC /* Artifact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBED24DACC8600DE07CC /* Artifact.cpp */; };
+		4973BBF224DADE7900DE07CC /* RandomEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBF024DADE7900DE07CC /* RandomEngine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		4973BBEB24D64F6400DE07CC /* Artifacts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Artifacts.hpp; sourceTree = "<group>"; };
 		4973BBED24DACC8600DE07CC /* Artifact.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Artifact.cpp; sourceTree = "<group>"; };
 		4973BBEE24DACC8600DE07CC /* Artifact.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Artifact.hpp; sourceTree = "<group>"; };
+		4973BBF024DADE7900DE07CC /* RandomEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RandomEngine.cpp; sourceTree = "<group>"; };
+		4973BBF124DADE7900DE07CC /* RandomEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RandomEngine.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				4973BBE324D56E1A00DE07CC /* Player.hpp */,
 				4973BBE624D56E4C00DE07CC /* Vector2f.hpp */,
 				4973BBEA24D64F6400DE07CC /* Artifacts.cpp */,
+				4973BBF024DADE7900DE07CC /* RandomEngine.cpp */,
+				4973BBF124DADE7900DE07CC /* RandomEngine.hpp */,
 				4973BBEB24D64F6400DE07CC /* Artifacts.hpp */,
 				4973BBED24DACC8600DE07CC /* Artifact.cpp */,
 				4973BBEE24DACC8600DE07CC /* Artifact.hpp */,
@@ -161,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4973BBF224DADE7900DE07CC /* RandomEngine.cpp in Sources */,
 				4973BBE924D59AC900DE07CC /* Game.cpp in Sources */,
 				4973BBE424D56E1A00DE07CC /* Player.cpp in Sources */,
 				4973BBEF24DACC8600DE07CC /* Artifact.cpp in Sources */,
