@@ -1,44 +1,22 @@
 #pragma once
 #include <SDL2/SDL.h>
-#include <string>
 #include <vector>
 #include <map>
-#include "Vector2f.hpp"
+#include "Artifact.hpp"
 
-
-// Todo: Implementation
-class Artifact {
+class Artifacts
+{
 private:
-    SDL_Rect mDestRect;
-    const int mWidth, mHeight;
+    std::vector<Artifact*> mArtifacts;
+    const int mArtifactWidth, mArtifactHeight, mScreenWidth, mScreenHeight;
 public:
-    Artifact(Vector2f position, int width, int height);
-    void mRender();
-    void mUpdate();
-    ~Artifact();
-};
-
-class Artifacts {
-    const int mWindowWidth;
-    const int mWindowHeight;
-    const int mArtifactWidth;
-    const int mArtifactHeight;
-    
-    std::vector<Vector2f> mPositions;
-    std::vector<SDL_Rect> mRects;
-    
-    Vector2f getPosition(Vector2f prev);
-public:
-    Artifacts(int windowWidth, int windowHeight);
+    Artifacts(int artifactWidth, int artifactHeight, int screenWidth, int screenHeight);
     void mInit();
-    void mRenderStart();
     void mUpdate();
     void mRender(SDL_Renderer* renderer);
-    void mRenderEnd();
     ~Artifacts();
-
+    
+    std::vector<Artifact*>& getArtifacts() { return this->mArtifacts; }
     const int& getArtifactWidth() { return this->mArtifactWidth; }
     const int& getArtifactHeight() { return this->mArtifactHeight; }
-    std::vector<Vector2f>& getPositions() { return this->mPositions; }
-    std::vector<SDL_Rect>& getRects() { return this->mRects; }
 };
