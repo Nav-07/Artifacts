@@ -16,8 +16,13 @@ void Game::mInit()
     const int playerWidth = 32;
     const int playerHeight = 32;
     Vector2f playerPosition = Vector2f(0, 0);
-    
     mPlayer = new Player(playerPosition, playerWidth, playerHeight);
+    
+    const int artifactWidth = 16;
+    const int artifactHeight = 16;
+    const int count = 10;
+    mArtifacts = new Artifacts(artifactWidth, artifactHeight, mWindowWidth, mWindowHeight, count);
+    mArtifacts->mInit();
 }
 
 void Game::mRenderStart()
@@ -27,6 +32,7 @@ void Game::mRenderStart()
 
 void Game::mUpdate()
 {
+    mArtifacts->mUpdate();
     mPlayer->mUpdate();
 }
 
@@ -35,6 +41,8 @@ void Game::mRender(SDL_Renderer *renderer)
     // Set the Color to White
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     mPlayer->mRender(renderer);
+    
+    mArtifacts->mRender(renderer);
     
     // Back to Black
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
@@ -66,7 +74,9 @@ void Game::mRenderEnd()
 
 Game::~Game()
 {
+    RandomEngine::mGetInstance()->mDestroy();
     delete mPlayer;
+    delete mArtifacts;
 }
 
 bool Game::isKeyPressed(SDL_Scancode key)

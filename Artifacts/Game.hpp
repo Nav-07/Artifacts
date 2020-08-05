@@ -1,12 +1,15 @@
 #pragma once
 #include "src/Player.hpp"
 #include "src/Vector2f.hpp"
+#include "src/RandomEngine.hpp"
+#include "src/Artifacts.hpp"
 #include <SDL2/SDL.h>
 
 class Game {
 private:
     int mWindowWidth, mWindowHeight;
     Player* mPlayer = nullptr;
+    Artifacts* mArtifacts = nullptr;
 public:
     Game(int windowWidth, int windowHeight);
     void mInit();

@@ -100,9 +100,9 @@
 				4973BBE324D56E1A00DE07CC /* Player.hpp */,
 				4973BBE624D56E4C00DE07CC /* Vector2f.hpp */,
 				4973BBEA24D64F6400DE07CC /* Artifacts.cpp */,
+				4973BBEB24D64F6400DE07CC /* Artifacts.hpp */,
 				4973BBF024DADE7900DE07CC /* RandomEngine.cpp */,
 				4973BBF124DADE7900DE07CC /* RandomEngine.hpp */,
-				4973BBEB24D64F6400DE07CC /* Artifacts.hpp */,
 				4973BBED24DACC8600DE07CC /* Artifact.cpp */,
 				4973BBEE24DACC8600DE07CC /* Artifact.hpp */,
 			);
