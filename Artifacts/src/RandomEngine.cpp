@@ -10,15 +10,16 @@ RandomEngine* RandomEngine::mGetInstance()
 
 float RandomEngine::mGenerateRandomFloat(float min, float max)
 {
-    
+    return 0.0f;
 }
 
-int RandomEngine::mGenerateRandoMInt(int min, int max)
+int RandomEngine::mGenerateRandomInt(int min, int max)
 {
-    
+    return 0;
 }
 
 void RandomEngine::mDestroy()
 {
-    
+    delete mInstance;
 }
+

@@ -12,5 +12,5 @@ public:
     static RandomEngine* mGetInstance();
     float mGenerateRandomFloat(float min, float max);
     int mGenerateRandomInt(int min, int max);
-    void mDestroy;
+    void mDestroy();
 };
