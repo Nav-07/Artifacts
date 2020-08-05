@@ -1,6 +1,9 @@
 #include "RandomEngine.hpp"
 
 RandomEngine* RandomEngine::mInstance = nullptr;
+static std::random_device rd;
+static std::default_random_engine rng(rd());
+
 RandomEngine* RandomEngine::mGetInstance()
 {
     if (mInstance == nullptr)
@@ -10,12 +13,14 @@ RandomEngine* RandomEngine::mGetInstance()
 
 float RandomEngine::mGenerateRandomFloat(float min, float max)
 {
-    return 0.0f;
+    std::uniform_int_distribution<float> dist(min, max);
+    return dist(rng);
 }
 
 int RandomEngine::mGenerateRandomInt(int min, int max)
 {
-    return 0;
+    std::uniform_int_distribution<int> dist(min, max);
+    return dist(rng);
 }
 
 void RandomEngine::mDestroy()
