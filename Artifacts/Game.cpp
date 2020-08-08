@@ -6,8 +6,6 @@ const float fps = 60;
 const float frameDelay = 1000 / fps;
 Uint32 frameStart, frameTime;
 
-static Artifact* test = nullptr;
-
 Game::Game(int windowWidth, int windowHeight)
 {
     this->mWindowWidth = windowWidth;
@@ -23,11 +21,9 @@ void Game::mInit()
     
     const int artifactWidth = 16;
     const int artifactHeight = 16;
-    const int count = 10;
+    const int count = 25;
     mArtifacts = new Artifacts(artifactWidth, artifactHeight, mWindowWidth, mWindowHeight, count);
     mArtifacts->mInit();
-    
-    test = new Artifact(Vector2f(50, 50), 16, 16);
 }
 
 void Game::mRenderStart()
@@ -39,7 +35,6 @@ void Game::mUpdate()
 {
     mArtifacts->mUpdate();
     mPlayer->mUpdate();
-    test->mUpdate();
 }
 
 void Game::mRender(SDL_Renderer *renderer)
@@ -49,7 +44,6 @@ void Game::mRender(SDL_Renderer *renderer)
     mPlayer->mRender(renderer);
     
     mArtifacts->mRender(renderer);
-    test->mRender(renderer);
     
     // Back to Black
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
@@ -85,7 +79,6 @@ Game::~Game()
     
     delete mPlayer;
     delete mArtifacts;
-    delete test;
 }
 
 bool Game::isKeyPressed(SDL_Scancode key)

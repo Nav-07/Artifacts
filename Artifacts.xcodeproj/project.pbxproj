@@ -14,6 +14,7 @@
 		4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBEA24D64F6400DE07CC /* Artifacts.cpp */; };
 		4973BBEF24DACC8600DE07CC /* Artifact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBED24DACC8600DE07CC /* Artifact.cpp */; };
 		4973BBF224DADE7900DE07CC /* RandomEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBF024DADE7900DE07CC /* RandomEngine.cpp */; };
+		49F74A5024DEA76600D803CA /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A4E24DEA76600D803CA /* CollisionManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		4973BBEE24DACC8600DE07CC /* Artifact.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Artifact.hpp; sourceTree = "<group>"; };
 		4973BBF024DADE7900DE07CC /* RandomEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RandomEngine.cpp; sourceTree = "<group>"; };
 		4973BBF124DADE7900DE07CC /* RandomEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RandomEngine.hpp; sourceTree = "<group>"; };
+		49F74A4E24DEA76600D803CA /* CollisionManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
+		49F74A4F24DEA76600D803CA /* CollisionManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CollisionManager.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				4973BBEB24D64F6400DE07CC /* Artifacts.hpp */,
 				4973BBF024DADE7900DE07CC /* RandomEngine.cpp */,
 				4973BBF124DADE7900DE07CC /* RandomEngine.hpp */,
+				49F74A4E24DEA76600D803CA /* CollisionManager.cpp */,
+				49F74A4F24DEA76600D803CA /* CollisionManager.hpp */,
 				4973BBED24DACC8600DE07CC /* Artifact.cpp */,
 				4973BBEE24DACC8600DE07CC /* Artifact.hpp */,
 			);
@@ -171,6 +176,7 @@
 				4973BBE424D56E1A00DE07CC /* Player.cpp in Sources */,
 				4973BBEF24DACC8600DE07CC /* Artifact.cpp in Sources */,
 				4973BBD824D5095E00DE07CC /* main.cpp in Sources */,
+				49F74A5024DEA76600D803CA /* CollisionManager.cpp in Sources */,
 				4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

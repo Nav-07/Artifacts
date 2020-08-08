@@ -1,4 +1,6 @@
 #include "Artifacts.hpp"
+#include "RandomEngine.hpp"
+#include "CollisionManager.hpp"
 
 Artifacts::Artifacts(int artifactWidth, int artifactHeight, int screenWidth, int screenHeight, int count):
     mArtifactWidth(artifactWidth),
@@ -12,26 +14,41 @@ void Artifacts::mInit()
 {
     // Initialize Artifacts Locations
     std::vector<Vector2f> locations;
-    Vector2f previousLocation;
+    Vector2f position = Vector2f();
     
-    for (int i = 0; i < mCount; ++i)
+    while (locations.size() < mCount)
     {
-        if (i == 0)
+        position.x = RandomEngine::mGetInstance()->mGenerateRandomInt(0, mScreenWidth-mArtifactWidth);
+        position.y = RandomEngine::mGetInstance()->mGenerateRandomInt(0, mScreenHeight-mArtifactHeight);
+        
+        bool overlapping = false;
+        for (auto& location:locations)
         {
-            // Generate Random Points
+            SDL_Rect a = { location.x, location.y, mArtifactWidth, mArtifactHeight };
+            SDL_Rect b = { position.x, position.y, mArtifactWidth, mArtifactHeight };
+            if (CollisionManager::mGetInstance()->mCheckCollision(a, b))
+            {
+                overlapping = true;
+                break;
+            }
         }
-        else
-        {
-            // Generate Points Based on the Previous Location
-        }
+        
+        if (!overlapping)
+            locations.push_back(position);
     }
     
     // Create the Objects
+    for (int i = 0; i < locations.size(); ++i)
+    {
+        mArtifacts.push_back(new Artifact(locations[i], mArtifactWidth, mArtifactHeight));
+    }
 }
 
 void Artifacts::mUpdate()
 {
     // Check for collisions.
+    for (int i = 0; i < mArtifacts.size(); ++i)
+        mArtifacts[i]->mUpdate();
 }
 
 void Artifacts::mRender(SDL_Renderer *renderer)
