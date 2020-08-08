@@ -46,6 +46,7 @@
 		4973BBF124DADE7900DE07CC /* RandomEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RandomEngine.hpp; sourceTree = "<group>"; };
 		49F74A4E24DEA76600D803CA /* CollisionManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
 		49F74A4F24DEA76600D803CA /* CollisionManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CollisionManager.hpp; sourceTree = "<group>"; };
+		49F74A5124DEAC6E00D803CA /* LevelConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LevelConfig.hpp; path = src/LevelConfig.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 				4973BBD724D5095E00DE07CC /* main.cpp */,
 				4973BBE724D59AC900DE07CC /* Game.cpp */,
 				4973BBE824D59AC900DE07CC /* Game.hpp */,
+				49F74A5124DEAC6E00D803CA /* LevelConfig.hpp */,
 				4973BBE124D56E0200DE07CC /* src */,
 			);
 			path = Artifacts;
