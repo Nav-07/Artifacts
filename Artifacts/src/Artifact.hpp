@@ -11,5 +11,7 @@ public:
     void mRender(SDL_Renderer* renderer);
     void mUpdate();
     ~Artifact();
+    
+    SDL_Rect mGetDestRect() { return this->mDestRect; }
 };
 

@@ -2,6 +2,7 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include <map>
+#include <algorithm>
 #include "Artifact.hpp"
 
 class Artifacts
@@ -16,6 +17,8 @@ public:
     void mUpdate();
     void mRender(SDL_Renderer* renderer);
     ~Artifacts();
+    
+    void mDestroyArtifact(Artifact* artifact);
     
     std::vector<Artifact*>& getArtifacts() { return this->mArtifacts; }
     const int& getArtifactWidth() { return this->mArtifactWidth; }

@@ -1,5 +1,6 @@
 #include "Game.hpp"
 #include "src/Artifact.hpp"
+#include "src/CollisionManager.hpp"
 
 const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
 const float fps = 60;
@@ -22,6 +23,7 @@ void Game::mInit()
     const int artifactWidth = 16;
     const int artifactHeight = 16;
     const int count = 25;
+    
     mArtifacts = new Artifacts(artifactWidth, artifactHeight, mWindowWidth, mWindowHeight, count);
     mArtifacts->mInit();
 }
@@ -35,6 +37,16 @@ void Game::mUpdate()
 {
     mArtifacts->mUpdate();
     mPlayer->mUpdate();
+    
+    // === Collision Detection
+    for (auto& a : mArtifacts->getArtifacts())
+    {
+        if (CollisionManager::mGetInstance()->mCheckCollision(mPlayer->mGetDestRect(), a->mGetDestRect()))
+        {
+            mArtifacts->mDestroyArtifact(a);
+        }
+        
+    }
 }
 
 void Game::mRender(SDL_Renderer *renderer)

@@ -65,3 +65,9 @@ Artifacts::~Artifacts()
     for (auto& a : mArtifacts)
         delete a;
 }
+
+void Artifacts::mDestroyArtifact(Artifact* artifact)
+{
+    mArtifacts.erase(std::remove(mArtifacts.begin(), mArtifacts.end(), artifact), mArtifacts.end());
+    delete artifact;
+}

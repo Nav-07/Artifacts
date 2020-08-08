@@ -20,5 +20,5 @@ public:
     
     int& mGetWidth() { return this->mWidth; }
     int& mGetHeight() { return this->mHeight; }
-    SDL_Rect& mGetDest() { return this->mDestRect; }
+    SDL_Rect& mGetDestRect() { return this->mDestRect; }
 };
