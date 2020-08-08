@@ -16,15 +16,19 @@
 		4973BBF224DADE7900DE07CC /* RandomEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBF024DADE7900DE07CC /* RandomEngine.cpp */; };
 		49F74A5024DEA76600D803CA /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A4E24DEA76600D803CA /* CollisionManager.cpp */; };
 		49F74A5324DEB11200D803CA /* LevelConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A5224DEB11200D803CA /* LevelConfig.cpp */; };
+		49F74A5524DEB1BE00D803CA /* libSDL2_ttf-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F74A5424DEB1BE00D803CA /* libSDL2_ttf-2.0.0.dylib */; };
+		49F74A5824DEB28600D803CA /* TextRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A5624DEB28600D803CA /* TextRenderer.cpp */; };
+		49F74A5C24DEB8B300D803CA /* Pixeled.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49F74A5B24DEB68A00D803CA /* Pixeled.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4973BBD224D5095E00DE07CC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 8;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
 			files = (
+				49F74A5C24DEB8B300D803CA /* Pixeled.ttf in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -49,6 +53,10 @@
 		49F74A4F24DEA76600D803CA /* CollisionManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CollisionManager.hpp; sourceTree = "<group>"; };
 		49F74A5124DEAC6E00D803CA /* LevelConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LevelConfig.hpp; sourceTree = "<group>"; };
 		49F74A5224DEB11200D803CA /* LevelConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LevelConfig.cpp; sourceTree = "<group>"; };
+		49F74A5424DEB1BE00D803CA /* libSDL2_ttf-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_ttf-2.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2_ttf/2.0.15/lib/libSDL2_ttf-2.0.0.dylib"; sourceTree = "<group>"; };
+		49F74A5624DEB28600D803CA /* TextRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextRenderer.cpp; sourceTree = "<group>"; };
+		49F74A5724DEB28600D803CA /* TextRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextRenderer.hpp; sourceTree = "<group>"; };
+		49F74A5B24DEB68A00D803CA /* Pixeled.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeled.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F74A5524DEB1BE00D803CA /* libSDL2_ttf-2.0.0.dylib in Frameworks */,
 				4973BBE024D509A200DE07CC /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +92,7 @@
 		4973BBD624D5095E00DE07CC /* Artifacts */ = {
 			isa = PBXGroup;
 			children = (
+				49F74A5A24DEB68A00D803CA /* res */,
 				4973BBD724D5095E00DE07CC /* main.cpp */,
 				4973BBE724D59AC900DE07CC /* Game.cpp */,
 				4973BBE824D59AC900DE07CC /* Game.hpp */,
@@ -94,6 +104,7 @@
 		4973BBDE24D509A200DE07CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49F74A5424DEB1BE00D803CA /* libSDL2_ttf-2.0.0.dylib */,
 				4973BBDF24D509A200DE07CC /* libSDL2-2.0.0.dylib */,
 			);
 			name = Frameworks;
@@ -115,8 +126,18 @@
 				49F74A4F24DEA76600D803CA /* CollisionManager.hpp */,
 				4973BBED24DACC8600DE07CC /* Artifact.cpp */,
 				4973BBEE24DACC8600DE07CC /* Artifact.hpp */,
+				49F74A5624DEB28600D803CA /* TextRenderer.cpp */,
+				49F74A5724DEB28600D803CA /* TextRenderer.hpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		49F74A5A24DEB68A00D803CA /* res */ = {
+			isa = PBXGroup;
+			children = (
+				49F74A5B24DEB68A00D803CA /* Pixeled.ttf */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +204,7 @@
 				4973BBD824D5095E00DE07CC /* main.cpp in Sources */,
 				49F74A5024DEA76600D803CA /* CollisionManager.cpp in Sources */,
 				49F74A5324DEB11200D803CA /* LevelConfig.cpp in Sources */,
+				49F74A5824DEB28600D803CA /* TextRenderer.cpp in Sources */,
 				4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +329,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/sdl2/2.0.12_1/lib,
+					/usr/local/Cellar/sdl2_ttf/2.0.15/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -320,6 +343,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/sdl2/2.0.12_1/lib,
+					/usr/local/Cellar/sdl2_ttf/2.0.15/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

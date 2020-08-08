@@ -2,6 +2,7 @@
 #include "src/LevelConfig.hpp"
 #include "src/Artifact.hpp"
 #include "src/CollisionManager.hpp"
+#include "src/TextRenderer.hpp"
 
 const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
 const float fps = 60;
@@ -26,6 +27,9 @@ void Game::mInit()
     
     mArtifacts = new Artifacts(artifactWidth, artifactHeight, LevelConfig::mLevelWidth, LevelConfig::mLevelHeight, LevelConfig::mArtifactCount);
     mArtifacts->mInit();
+    
+    TextRenderer::mGetInstance()->mInit();
+    TextRenderer::mGetInstance()->mLoadFont("Pixeled", "res/Pixeled.ttf", 24);
 }
 
 void Game::mRenderStart()
@@ -70,6 +74,8 @@ void Game::mRender(SDL_Renderer *renderer)
     
     // Back to Black
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+    
+    TextRenderer::mGetInstance()->mRenderFont(renderer, "Pixeled", std::to_string(LevelConfig::mCollected), 1, { 255, 255, 255 });
 }
 
 void Game::mHandleEvents(SDL_Event &e)

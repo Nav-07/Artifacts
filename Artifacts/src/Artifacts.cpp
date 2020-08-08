@@ -1,6 +1,7 @@
 #include "Artifacts.hpp"
 #include "RandomEngine.hpp"
 #include "CollisionManager.hpp"
+#include "LevelConfig.hpp"
 
 Artifacts::Artifacts(int artifactWidth, int artifactHeight, int screenWidth, int screenHeight, int count):
     mArtifactWidth(artifactWidth),
@@ -70,4 +71,5 @@ void Artifacts::mDestroyArtifact(Artifact* artifact)
 {
     mArtifacts.erase(std::remove(mArtifacts.begin(), mArtifacts.end(), artifact), mArtifacts.end());
     delete artifact;
+    ++LevelConfig::mCollected;
 }
