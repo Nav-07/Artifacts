@@ -15,6 +15,7 @@
 		4973BBEF24DACC8600DE07CC /* Artifact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBED24DACC8600DE07CC /* Artifact.cpp */; };
 		4973BBF224DADE7900DE07CC /* RandomEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4973BBF024DADE7900DE07CC /* RandomEngine.cpp */; };
 		49F74A5024DEA76600D803CA /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A4E24DEA76600D803CA /* CollisionManager.cpp */; };
+		49F74A5324DEB11200D803CA /* LevelConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A5224DEB11200D803CA /* LevelConfig.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,7 +47,8 @@
 		4973BBF124DADE7900DE07CC /* RandomEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RandomEngine.hpp; sourceTree = "<group>"; };
 		49F74A4E24DEA76600D803CA /* CollisionManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
 		49F74A4F24DEA76600D803CA /* CollisionManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CollisionManager.hpp; sourceTree = "<group>"; };
-		49F74A5124DEAC6E00D803CA /* LevelConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LevelConfig.hpp; path = src/LevelConfig.hpp; sourceTree = "<group>"; };
+		49F74A5124DEAC6E00D803CA /* LevelConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LevelConfig.hpp; sourceTree = "<group>"; };
+		49F74A5224DEB11200D803CA /* LevelConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LevelConfig.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,6 @@
 				4973BBD724D5095E00DE07CC /* main.cpp */,
 				4973BBE724D59AC900DE07CC /* Game.cpp */,
 				4973BBE824D59AC900DE07CC /* Game.hpp */,
-				49F74A5124DEAC6E00D803CA /* LevelConfig.hpp */,
 				4973BBE124D56E0200DE07CC /* src */,
 			);
 			path = Artifacts;
@@ -101,6 +102,8 @@
 		4973BBE124D56E0200DE07CC /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49F74A5124DEAC6E00D803CA /* LevelConfig.hpp */,
+				49F74A5224DEB11200D803CA /* LevelConfig.cpp */,
 				4973BBE224D56E1A00DE07CC /* Player.cpp */,
 				4973BBE324D56E1A00DE07CC /* Player.hpp */,
 				4973BBE624D56E4C00DE07CC /* Vector2f.hpp */,
@@ -179,6 +182,7 @@
 				4973BBEF24DACC8600DE07CC /* Artifact.cpp in Sources */,
 				4973BBD824D5095E00DE07CC /* main.cpp in Sources */,
 				49F74A5024DEA76600D803CA /* CollisionManager.cpp in Sources */,
+				49F74A5324DEB11200D803CA /* LevelConfig.cpp in Sources */,
 				4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

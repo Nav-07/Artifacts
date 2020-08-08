@@ -1,4 +1,5 @@
 #include "Player.hpp"
+#include "LevelConfig.hpp"
 
 Player::Player(Vector2f position, int width, int height)
 {
@@ -14,7 +15,8 @@ Player::Player(Vector2f position, int width, int height)
 
 void Player::mRender(SDL_Renderer* renderer)
 {
-    SDL_RenderFillRect(renderer, &this->mDestRect);
+    SDL_Rect renderRect = { mDestRect.x - LevelConfig::mCamera.x, mDestRect.y - LevelConfig::mCamera.y, mDestRect.w, mDestRect.h };
+    SDL_RenderFillRect(renderer, &renderRect);
 }
 
 void Player::mUpdate()

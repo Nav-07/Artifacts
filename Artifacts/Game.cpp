@@ -1,4 +1,5 @@
 #include "Game.hpp"
+#include "src/LevelConfig.hpp"
 #include "src/Artifact.hpp"
 #include "src/CollisionManager.hpp"
 
@@ -22,9 +23,8 @@ void Game::mInit()
     
     const int artifactWidth = 16;
     const int artifactHeight = 16;
-    const int count = 25;
     
-    mArtifacts = new Artifacts(artifactWidth, artifactHeight, mWindowWidth, mWindowHeight, count);
+    mArtifacts = new Artifacts(artifactWidth, artifactHeight, LevelConfig::mLevelWidth, LevelConfig::mLevelHeight, LevelConfig::mArtifactCount);
     mArtifacts->mInit();
 }
 
@@ -47,6 +47,17 @@ void Game::mUpdate()
         }
         
     }
+    
+    LevelConfig::mCamera.x = (mPlayer->mGetDestRect().x + mPlayer->mGetDestRect().w/2) - mWindowWidth/2;
+    LevelConfig::mCamera.y = (mPlayer->mGetDestRect().y + mPlayer->mGetDestRect().h/2) - mWindowHeight/2;
+    if (LevelConfig::mCamera.x < 0)
+        LevelConfig::mCamera.x = 0;
+    if (LevelConfig::mCamera.y < 0)
+        LevelConfig::mCamera.y = 0;
+    if (LevelConfig::mCamera.x > LevelConfig::mLevelWidth - LevelConfig::mCamera.w)
+        LevelConfig::mCamera.x = LevelConfig::mLevelWidth - LevelConfig::mCamera.w;
+    if (LevelConfig::mCamera.y > LevelConfig::mLevelHeight - LevelConfig::mCamera.h)
+        LevelConfig::mCamera.y = LevelConfig::mLevelHeight - LevelConfig::mCamera.h;
 }
 
 void Game::mRender(SDL_Renderer *renderer)

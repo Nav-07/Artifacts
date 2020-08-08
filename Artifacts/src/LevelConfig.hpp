@@ -1,12 +1,15 @@
 #pragma once
+#include <SDL2/SDL.h>
 
-class LevelConfig {
+class LevelConfig
+{
 public:
-    const int mLevelWidth = 640*5;
-    const int mLevelHeight = 480*5;
-    const int mArtifactCount = 150;
-    const int mTime = 120;
+    static const int mLevelWidth = 640*5;
+    static const int mLevelHeight = 480*5;
+    static const int mArtifactCount = 150;
+    static const int mTime = 120;
     
-    int mCollected = 0;
-    int mElapsed = 0;
+    static int mCollected;
+    static int mElapsed;
+    static SDL_Rect mCamera;
 };
