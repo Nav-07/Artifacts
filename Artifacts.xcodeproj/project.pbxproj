@@ -19,6 +19,7 @@
 		49F74A5524DEB1BE00D803CA /* libSDL2_ttf-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F74A5424DEB1BE00D803CA /* libSDL2_ttf-2.0.0.dylib */; };
 		49F74A5824DEB28600D803CA /* TextRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A5624DEB28600D803CA /* TextRenderer.cpp */; };
 		49F74A5C24DEB8B300D803CA /* Pixeled.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49F74A5B24DEB68A00D803CA /* Pixeled.ttf */; };
+		49F74A5F24DF81D900D803CA /* GameClock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F74A5D24DF81D900D803CA /* GameClock.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,8 @@
 		49F74A5624DEB28600D803CA /* TextRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextRenderer.cpp; sourceTree = "<group>"; };
 		49F74A5724DEB28600D803CA /* TextRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextRenderer.hpp; sourceTree = "<group>"; };
 		49F74A5B24DEB68A00D803CA /* Pixeled.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeled.ttf; sourceTree = "<group>"; };
+		49F74A5D24DF81D900D803CA /* GameClock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameClock.cpp; sourceTree = "<group>"; };
+		49F74A5E24DF81D900D803CA /* GameClock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameClock.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				4973BBEE24DACC8600DE07CC /* Artifact.hpp */,
 				49F74A5624DEB28600D803CA /* TextRenderer.cpp */,
 				49F74A5724DEB28600D803CA /* TextRenderer.hpp */,
+				49F74A5D24DF81D900D803CA /* GameClock.cpp */,
+				49F74A5E24DF81D900D803CA /* GameClock.hpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				4973BBEF24DACC8600DE07CC /* Artifact.cpp in Sources */,
 				4973BBD824D5095E00DE07CC /* main.cpp in Sources */,
 				49F74A5024DEA76600D803CA /* CollisionManager.cpp in Sources */,
+				49F74A5F24DF81D900D803CA /* GameClock.cpp in Sources */,
 				49F74A5324DEB11200D803CA /* LevelConfig.cpp in Sources */,
 				49F74A5824DEB28600D803CA /* TextRenderer.cpp in Sources */,
 				4973BBEC24D64F6400DE07CC /* Artifacts.cpp in Sources */,
